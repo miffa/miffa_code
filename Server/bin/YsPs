@@ -1,0 +1,5 @@
+echo Ys_urlGetor process info:
+echo -------------------------
+
+ps -eo pid,cmd| grep YS_urlgetor | grep -v grep || echo no starting
+echo -------------------------

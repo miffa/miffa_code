@@ -1,0 +1,11 @@
+
+ps -eo pid,cmd| grep YS_urlgetor | grep -v grep > /dev/null 2>&1 && ST=1  || ST=0
+if [ $ST -eq 0 ];then
+        echo no YS_urlgetor in process
+else
+        echo YS_urlgetor has already been working, will stop
+        PID=`ps -eo pid,cmd| grep YS_urlgetor | grep -v grep| awk '{print $1}'`
+        echo kill -9 $PID
+        kill -9 $PID
+        echo  stop ok 
+fi
