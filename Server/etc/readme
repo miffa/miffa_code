@@ -1,0 +1,4 @@
+ser.conf 是配置文件
+配置内容格式：name:value|
+socket服务接口:urlID|tablename|
+服务器部署：将$HOME/Server/bin加入PATH环境变量
